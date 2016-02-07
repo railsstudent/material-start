@@ -11,17 +11,52 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+
   </head>
 
   <body ng-app="starterApp" layout="column" ng-controller="UserController as ul" ng-cloak>
 
-    <md-toolbar layout="row">
-      <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-        <md-icon md-svg-icon="menu" ></md-icon>
-      </md-button>
-      <h1>Angular Material - Starter App</h1>
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+      md-component-id="left"
+      ng-click="ul.toggleList()" aria-label="Show User List"
+      md-is-locked-open="$mdMedia('gt-sm')">
+
+    <md-toolbar class="md-whiteframe-z1">
+      <h3>Users</h3>
     </md-toolbar>
 
+    <md-list>
+      <md-list-item ng-repeat="it in ul.users">
+          <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
+            <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
+            {{it.name}}
+          </md-button>
+      </md-list-item>
+    </md-list>
+
+  </md-sidenav>
+
+>>>>>>> 52e5602ac7e2763e9b32f11ca489972eca118f16
+
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+      <md-button id="main" class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <h3>Angular Material - Starter App</h3>
+    </md-toolbar>
+
+<<<<<<< HEAD
     <div flex layout="row">
 
         <md-sidenav  ng-click="ul.toggleList()" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2" >
@@ -44,8 +79,20 @@
             <md-icon md-svg-icon="share"></md-icon>
           </md-button>
         </md-content>
+=======
+    <md-content flex id="content">
+        <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
+        <h2>{{ul.selected.name}}</h2>
+        <p>{{ul.selected.content}}</p>
 
-    </div>
+        <md-button class="contact" md-no-ink ng-click="ul.makeContact(ul.selected)" aria-label="Share with {{ ul.selected.name }}">
+          <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
+          <md-icon md-svg-icon="share"></md-icon>
+        </md-button>
+      </md-content>
+>>>>>>> 52e5602ac7e2763e9b32f11ca489972eca118f16
+
+  </div>
 
     <script src="../node_modules/angular/angular.js"></script>
     <script src="../node_modules/angular-animate/angular-animate.js"></script>

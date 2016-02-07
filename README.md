@@ -4,7 +4,7 @@ This branch contains the tutorial steps and processes used to implement the star
 
 ![material-starter-ux2](https://cloud.githubusercontent.com/assets/210413/6448551/70864488-c0e0-11e4-8767-c4e1e4c2f343.png)
 
-Above is a snaphot of the Starter-App with a **Master-Detail** layout: showing a list of users (left) and a user detail view (right). 
+Above is a snaphot of the Starter-App with a **Master-Detail** layout: showing a list of users (left) and a user detail view (right).
 
 Also shown is the user experience that will be displayed for smaller device sizes. The responsive layout reveals the **menu** button that can be used to hide the user list and a **share** button that can be used to show the Share bottom sheet view.
 
@@ -36,7 +36,7 @@ Here are some generalized steps that may be used to conceptualize the applicatio
 4. Add Adaptive breakpoints
 5. Add Theming support
 6. Confirm ARIA compliance
-7. Write e2e Tests 
+7. Write e2e Tests
 > It is important to validate your app logic with Angular Material UI components.
 
 ##### ES5 Tutorials
@@ -80,7 +80,7 @@ Here will modified the shell application [available in `tutorial_0.html`] to use
 
 <br/>
 - - -
- 
+
 ##### <span style="color:red;font-size:1.1em;">JSBin</span> Demo for [Step #1](http://thomasburleson.jsbin.com/fuyomo/edit?html,output)
 
 
@@ -90,7 +90,7 @@ Here will modified the shell application [available in `tutorial_0.html`] to use
 ### Step #2: Container Layouts
 
 <br/>
-###### Wirefame 
+###### Wirefame
 
 The illustration below shows how we planned the layout and identified the primary components that will be used in the Starter application:
 
@@ -126,7 +126,7 @@ The illustration below shows how we planned the layout and identified the primar
         <md-content flex id="content"></md-content>
 
     </div>
-	
+
   </body>
 ```
 
@@ -134,7 +134,7 @@ Here you used the wireframe planning and layout to identify the components and a
 
 <br/>
 - - -
- 
+
 #####  <span style="color:red;font-size:1.1em;">JSBin</span> Demo for: Step #2
 
 <a href="http://thomasburleson.jsbin.com/kesaci/edit?html,output" target="_blank">
@@ -197,7 +197,7 @@ Here you will use hard-coded elements and Angular Material UI componetns to rend
 
 <br/>
 - - -
- 
+
 #####  <span style="color:red;font-size:1.1em;">JSBin</span> Demo for: Step #3
 
 <a href="http://thomasburleson.jsbin.com/bozasu/edit?html,output" target="_blank">
@@ -233,7 +233,7 @@ Then you integrate your custom, application logic.
 </script>
 ```
 
-Now replace the hardcoded HTML with dynamic markup using Angular directives (eg ng-repeat) 
+Now replace the hardcoded HTML with dynamic markup using Angular directives (eg ng-repeat)
 and the standard Angular `{{ }}` interpolation markup.
 
 * Use dynamic HTML that will be compiled and rendered by Angular
@@ -260,7 +260,7 @@ and the standard Angular `{{ }}` interpolation markup.
 	  <h2>{{ul.selected.name}}</h2>
 	  <p>{{ul.selected.content}}</p>
 	</md-content>
-	
+
  </div>
 
 
@@ -279,7 +279,7 @@ and the standard Angular `{{ }}` interpolation markup.
 
 <br/>
 - - -
- 
+
 #####  <span style="color:red;font-size:1.1em;">JSBin</span> Demo for: Step #4
 
 <a href="http://thomasburleson.jsbin.com/sabited/edit?html,output" target="_blank">
@@ -289,7 +289,7 @@ and the standard Angular `{{ }}` interpolation markup.
 <br/>
 - - -
 
-### Step #5: Use the BottomSheet 
+### Step #5: Use the BottomSheet
 
 In this step, you will use a dynamic, mbBottomSheet component at the bottom of the user details area. This contact sheet will be used to display user contact options available for each user.
 
@@ -358,8 +358,8 @@ function share(selectedUser) {
 
 <br/>
 - - -
- 
- 
+
+
 #####  <span style="color:red;font-size:1.1em;">JSBin</span> Demo for: Step #5
 
 <a href="http://thomasburleson.jsbin.com/kakezu/edit?html,output" target="_blank">
@@ -376,11 +376,11 @@ The Angular Material Layout API uses **flexbox** to enable your DOM containers a
 
 ![breakpointranges](https://cloud.githubusercontent.com/assets/210413/12618815/2ea8743c-c4db-11e5-817f-0bdd20a6406c.png)
 
-But using media queries and breakpoints is too low-level for Angular Material developers. Hence the use of the 
+But using media queries and breakpoints is too low-level for Angular Material developers. Hence the use of the
 
 ![breakpoint-aliases](https://cloud.githubusercontent.com/assets/210413/12618729/cbeb4b9e-c4da-11e5-84a7-8fab43f20d4b.png)
 
-Simply append the alias to the desired Layout API to trigger that directive to work only when the breakpoint range is active. 
+Simply append the alias to the desired Layout API to trigger that directive to work only when the breakpoint range is active.
 
 ![layout_api_with_aliases](https://cloud.githubusercontent.com/assets/210413/12619004/de4f031a-c4db-11e5-85f5-5c426f4045e3.png)
 
@@ -465,7 +465,7 @@ function UserController( userService, $mdBottomSheet, $mdSidenav ) {
 <br/>
 - - -
 
- 
+
 #####  <span style="color:red;font-size:1.1em;">JSBin</span> Demo for: Step #6
 
 <a href="http://thomasburleson.jsbin.com/zuzana/edit?html,output" target="_blank">
@@ -526,7 +526,7 @@ Finally let's will fix any ARIA warnings that Angular Material may display in th
 
 <br/>
 - - -
- 
+
 #####  <span style="color:red;font-size:1.1em;">JSBin</span> Demo for: Step #7
 
 <a href="http://thomasburleson.jsbin.com/lixohom/edit?html,output" target="_blank">
@@ -540,8 +540,6 @@ Finally let's will fix any ARIA warnings that Angular Material may display in th
 
 ## Summary
 
-With only seven (7) Tutorial Steps and a few minutes of work, we have quickly created a functional Angular Material application that is beautiful, responsive, theme'ed, accessible, and easily maintained. 
+With only seven (7) Tutorial Steps and a few minutes of work, we have quickly created a functional Angular Material application that is beautiful, responsive, theme'ed, accessible, and easily maintained.
 
 Imagine doing this without Angular Material!
-
-
