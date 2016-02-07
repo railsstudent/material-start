@@ -1,0 +1,25 @@
+{
+  "name": "material-start",
+  "description": "A starter project for AngularJS Material",
+  "main": "index.html",
+  "authors": [
+    "Connie <cleung334@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "material",
+    "design"
+  ],
+  "homepage": "https://github.com/railsstudent/material-start",
+  "private": true,
+  "dependencies": {
+    "angular-material": "1.0.4",
+    "angular": "~1.4.9",
+    "angular-aria": "~1.4.9",
+    "angular-animate": "~1.4.9"
+  },
+  "resolutions": {
+    "angular": "1.4.9"
+  }
+}

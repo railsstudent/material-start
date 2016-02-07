@@ -15,6 +15,7 @@
   },
   "scripts": {
     "postinstall": "bower update",
-    "prestart": "npm update"
+    "prestart": "npm update",
+    "start" : "node_modules/.bin/http-server app/"
   }
 }
